@@ -20,19 +20,14 @@ class AdminAuthController extends Controller
 
         if ($request->isMethod('post')) {
 
-            // dd($request->all());
-            $validator = Validator::make($request->all(), [
+            $validator = $request->validate([
                 'email' => 'email|required',
                 'password' => 'required'
             ]);
-
-            if ($validator->fails()) {
-                return back()->with('message', 'invalid Credentials');
-            }
-            if (Auth::guard('owner')->attempt(['email' => $request->email, 'password' => $request->password])) {
+            if (Auth::guard('admin')->attempt(['email' => $request->email, 'password' => $request->password])) {
                 return redirect(route('admin.dashboard'));
             } else {
-                return back()->with('message', 'invalid Credentials');
+                return back()->with('error', 'invalid Credentials');
             }
         }
     }

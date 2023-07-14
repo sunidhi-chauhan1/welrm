@@ -5,7 +5,7 @@
             <div class="main-logo d-lg-block d-none">
                 <div class="logo-big">
                     <a href="dashboard-index.html">
-                        <img src="dashboad/assets/images/logo-black.png" alt="Logo">
+                        <img src="{{ asset('images/Logo.png') }}" alt="Logo">
                     </a>
                 </div>
                 <div class="logo-small">

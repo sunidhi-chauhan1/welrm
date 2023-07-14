@@ -31,6 +31,18 @@
             </div>
             <div class="bottom">
                 <h3 class="panel-title">Login</h3>
+                <div class="login-status">
+                    @if ($errors->any())
+                        @foreach ($errors->all() as $error)
+                            <div class="msg-error alert alert-danger py-2 px-3 rounded mb-20 fs-14"><i
+                                    class="fa-regular fa-circle-exclamation me-2"></i> {{ $error }}</div>
+                        @endforeach
+                    @endif
+                    @if (Session::has('error'))
+                        <div class="msg-error alert alert-danger py-2 px-3 rounded mb-20 fs-14"><i
+                                class="fa-regular fa-circle-exclamation me-2"></i> {{ Session::get('error') }}</div>
+                    @endif
+                </div>
                 <form action="{{ route('admin.login') }}" method="Post">
                     @csrf
                     <div class="input-group mb-30">

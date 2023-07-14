@@ -33,7 +33,7 @@ Route::get('contact', function () {
     return view('user.contact');
 })->name('contact');
 
-Route::get('dashboard', function () {
+// Route::get('dashboard', function () {
 
-    return view('admin.dashboard');
-});
+//     return view('admin.dashboard');
+// });
