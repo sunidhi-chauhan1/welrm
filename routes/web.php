@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\Admin\AdminAuthController;
 
 /*
@@ -33,7 +34,10 @@ Route::get('contact', function () {
     return view('user.contact');
 })->name('contact');
 
-// Route::get('dashboard', function () {
 
-//     return view('admin.dashboard');
-// });
+Route::controller(UserAuthController::class)->group(function () {
+
+    Route::Post('signup', 'signup')->name('signup');
+    Route::Post('login', 'login')->name('login');
+    Route::any('logout', 'logout')->name('logout');
+});
