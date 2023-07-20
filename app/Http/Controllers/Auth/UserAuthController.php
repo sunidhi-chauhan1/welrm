@@ -54,8 +54,31 @@ class UserAuthController extends Controller
 
             $request->session()->regenerate();
 
-            session()->forget(['signup', 'login-error']);
+            session()->forget(['signup', 'signup']);
 
+            return redirect()->route('index')->with('success', "Logged in successfully. ");
+        } else {
+            session()->put('login-error', 'error');
+        }
+        return back()->with('error', 'Invalid credentials.');
+    }
+
+    public function phoneLogin(Request $request)
+    {
+
+        $request->validate([
+
+            'mobile'    => 'required|numeric|digits:10',
+            'password' => 'required',
+
+        ]);
+
+        $credentials = $request->only('mobile', 'password');
+
+
+        if (Auth::attempt($credentials)) {
+
+            session()->forget(['login-error', 'phone-login']);
             return redirect()->route('index')->with('success', "Logged in successfully. ");
         } else {
             session()->put('login-error', 'error');
