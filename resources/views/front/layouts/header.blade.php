@@ -64,7 +64,7 @@
                             <a class="nav-link" href="./blog.html">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a href="./contact.html" class="nav-link">Contact Us</a>
+                            <a href="{{ route('contact') }}" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
                     <form class="d-flex">

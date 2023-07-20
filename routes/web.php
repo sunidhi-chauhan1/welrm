@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Artisan;
+use App\Http\Controllers\ContactUsController;
 use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\Admin\AdminAuthController;
 
@@ -40,4 +41,9 @@ Route::controller(UserAuthController::class)->group(function () {
     Route::Post('signup', 'signup')->name('signup');
     Route::Post('login', 'login')->name('login');
     Route::any('logout', 'logout')->name('logout');
+});
+
+Route::controller(ContactUsController::class)->group(function () {
+
+    Route::post('contact', 'submitContactForm')->name('contact');
 });
