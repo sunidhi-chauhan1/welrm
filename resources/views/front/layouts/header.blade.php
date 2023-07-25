@@ -40,10 +40,10 @@
                             <a class="nav-link active" aria-current="page" href="{{ route('index') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./About.html">About Us</a>
+                            <a class="nav-link" href="{{ route('about') }}">About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Hotels</a>
+                            <a class="nav-link" href="{{ route('hotel-details') }}">Hotels</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -52,19 +52,20 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li>
-                                    <a class="dropdown-item" href="./Privacy.html">
+                                    <a class="dropdown-item" href="{{ route('privacy') }}">
                                         Privacy policy</a>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="./Termsandcondition.html">Terms and Conditions</a>
+                                    <a class="dropdown-item" href="{{ route('terms-condition') }}">Terms and
+                                        Conditions</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./blog.html">Blog</a>
+                            <a class="nav-link" href="{{ route('blog') }}">Blog</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{ route('contact') }}" class="nav-link">Contact Us</a>
+                            <a href="{{ route('contact-us') }}" class="nav-link">Contact Us</a>
                         </li>
                     </ul>
                     <form class="d-flex">
@@ -76,7 +77,7 @@
     </div>
 </div>
 
-<div class="header_banner scroll-area">
+{{-- <div class="header_banner scroll-area">
     <div class="container heading">
         <h1 class="">
             Find Your Best Stay <br />
@@ -85,5 +86,5 @@
     </div>
 
     .
-</div>
+</div> --}}
 <!-- ! Header section  -->

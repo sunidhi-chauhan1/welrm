@@ -8,6 +8,14 @@ use Illuminate\Http\JsonResponse;
 
 class ContactUsController extends Controller
 {
+
+    public function contactView()
+    {
+
+
+        return view('user.contact');
+    }
+
     public function submitContactForm(Request $request)
     {
 
