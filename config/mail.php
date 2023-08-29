@@ -45,6 +45,8 @@ return [
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
         ],
 
+        
+
         'ses' => [
             'transport' => 'ses',
         ],
@@ -61,6 +63,12 @@ return [
             'transport' => 'sendmail',
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
         ],
+
+        'sendgrid' => [
+            'transport' => 'sendgrid',
+            'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
+        ],
+        
 
         'log' => [
             'transport' => 'log',

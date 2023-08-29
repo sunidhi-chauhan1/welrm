@@ -13,7 +13,7 @@ class ContactUsController extends Controller
     {
 
 
-        return view('user.contact');
+        return view('Others.contact');
     }
 
     public function submitContactForm(Request $request)

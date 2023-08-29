@@ -19,7 +19,8 @@
     <!-- Date Picker  -->
 
     <!-- !CSS  -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{asset('style.css')}}" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -37,6 +38,8 @@
 
     <!-- ! CDNS  -->
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
     <script
      type="module"
      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
@@ -57,9 +60,22 @@
             countryCode: 'in'
         });
     </script>
+   
 
-    <script src="./js/script.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+@if (session()->has('signup') || session()->has('login-error'))
+    <script>
+        $(function() {
+
+            // $('#Sign_modal').modal('show');
+        });
+    </script>
+@endif
+
+<script src="https://kit.fontawesome.com/72aeadbf11.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <!-- ! Data Picker Cdns -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
@@ -103,6 +119,10 @@
             @endforeach
         @endif
     </script>
+    <script src="./js/script.js"></script>
+
+    
+    
 </body>
 
 </html>

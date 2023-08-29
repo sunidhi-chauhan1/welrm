@@ -1,3 +1,15 @@
+document.onclick = function (e) {
+  e.stopPropagation();
+
+  // if (e.target.id !== 'initial_sign') {
+  //   initial_sign.classList.remove('openSing');
+  // }
+
+  if (e.target.id !== 'Home_Room_booking') {
+    Home_Room_booking.classList.remove('HomeActive');
+  }
+};
+
 // ! Header On scroll
 
 $(document).ready(function () {
@@ -67,8 +79,8 @@ var swiper = new Swiper('.OurSlider', {
 });
 
 var swiper = new Swiper('.Destiniations_slider', {
+  slidesPerView: 'auto',
   freeMode: true,
-
   breakpoints: {
     1028: {
       slidesPerView: 3,
@@ -112,8 +124,11 @@ var swiper = new Swiper('.blogSlider', {
 });
 
 var swiper = new Swiper('.Trends_cards', {
+  allowTouchMove: false,
+  noSwipingClass: 'swiper-no-swiping',
   pagination: {
     el: '.swiper-pagination',
+
     type: 'progressbar',
   },
   navigation: {
@@ -128,14 +143,14 @@ var swiper = new Swiper('.Trend_slider_img_2', {
   slidesPerView: 4,
   freeMode: true,
   watchSlidesProgress: true,
-  allowTouchMove: false,
   autoplay: true,
+  noSwipingClass: 'swiper-no-swiping',
 });
 
 var swiper3 = new Swiper('.Trend_slider_img_1', {
   loop: true,
   spaceBetween: 10,
-  allowTouchMove: false,
+  noSwipingClass: 'swiper-no-swiping',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
@@ -198,32 +213,13 @@ var swiper = new Swiper('.Hotel_details_slider', {
 });
 
 // new
-var swiper = new Swiper(".Hotelnew1", {
-  spaceBetween: 10,
-  slidesPerView: 4,
-  freeMode: true,
-  watchSlidesProgress: true,
-});
-var swiper2 = new Swiper(".Hotelnew2", {
-  spaceBetween: 10,
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-  thumbs: {
-    swiper: swiper,
-  },
-});
 
 // new
 
-
-
 // Chain  Slider
 
-
-// const Login_pop_btn = document.querySelector('.Login_pop_btn'); 
-// const Login_pop_main = document.querySelector('.Login_popup'); 
+// const Login_pop_btn = document.querySelector('.Login_pop_btn');
+// const Login_pop_main = document.querySelector('.Login_popup');
 // Login_pop_btn.addEventListener('click', () => {
 //   Login_pop_main.classList.toggle('Login_on')
 //   // document.body.classList.toggle('ovrflw')
@@ -237,59 +233,48 @@ var swiper2 = new Swiper(".Hotelnew2", {
 //   event.stopPropagation()
 // })
 
-
 // CodeVerify
-var otp_inputs = document.querySelectorAll(".otp__digit");
-var mykey = "0123456789".split("");
-otp_inputs.forEach((_) => {
-  _.addEventListener("keyup", handle_next_input);
+var otp_inputs = document.querySelectorAll('.otp__digit');
+var mykey = '0123456789'.split('');
+otp_inputs.forEach(_ => {
+  _.addEventListener('keyup', handle_next_input);
 });
 function handle_next_input(event) {
   let current = event.target;
-  let index = parseInt(current.classList[1].split("__")[2]);
+  let index = parseInt(current.classList[1].split('__')[2]);
   current.value = event.key;
 
   if (event.keyCode == 8 && index > 1) {
     current.previousElementSibling.focus();
   }
-  if (index < 6 && mykey.indexOf("" + event.key + "") != -1) {
+  if (index < 6 && mykey.indexOf('' + event.key + '') != -1) {
     var next = current.nextElementSibling;
     next.focus();
   }
-  var _finalKey = "";
+  var _finalKey = '';
   for (let { value } of otp_inputs) {
     _finalKey += value;
   }
   if (_finalKey.length == 6) {
-    document.querySelector("#_otp").classList.replace("_notok", "_ok");
-    document.querySelector("#_otp").innerText = _finalKey;
+    document.querySelector('#_otp').classList.replace('_notok', '_ok');
+    document.querySelector('#_otp').innerText = _finalKey;
   } else {
-    document.querySelector("#_otp").classList.replace("_ok", "_notok");
-    document.querySelector("#_otp").innerText = _finalKey;
+    document.querySelector('#_otp').classList.replace('_ok', '_notok');
+    document.querySelector('#_otp').innerText = _finalKey;
   }
 }
 
-
-
 // CodeVerify
 
-
-// ! Data Picker 
+// ! Data Picker
 $(function () {
-  $('.date_icons_1').daterangepicker(
-    {
-      ssingleDatePicker: 'true',
-      showShortcuts: 'false',
-      showTopbar: 'false'
-    }
-  );
+  $('.date_icons_1').daterangepicker({
+    ssingleDatePicker: 'true',
+    showShortcuts: 'false',
+    showTopbar: 'false',
+  });
 });
-// ! Data Picker 
-
-
-
-
-
+// ! Data Picker
 
 //Code Verification
 var verificationCode = [];

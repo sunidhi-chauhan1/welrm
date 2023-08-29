@@ -10,20 +10,21 @@
                 </div>
                 <div class="logo-small">
                     <a href="dashboard-index.html">
-                        <img src="dashboad/assets/images/logo-small.png" alt="Logo">
+                    <img src="{{ asset('images/Logo.png') }}" alt="Logo">
                     </a>
                 </div>
             </div>
             <div class="nav-close-btn">
                 <button id="navClose"><i class="fa-light fa-bars-sort"></i></button>
             </div>
-            <a href="#" target="_blank" class="btn btn-sm btn-primary site-view-btn"><i
-                    class="fa-light fa-globe me-1"></i> <span>View Website</span></a>
+            <a href="{{ asset('https://test.pearl-developer.com/welrm/public/') }}" target="_blank"
+                class="btn btn-sm btn-primary site-view-btn"><i class="fa-light fa-globe me-1"></i> <span>View
+                    Website</span></a>
         </div>
         <div class="col-4 d-lg-none">
             <div class="mobile-logo">
                 <a href="dashboard-index.html">
-                    <img src="dashboad/assets/images/logo-black.png" alt="Logo">
+                <img src="{{ asset('images/Logo.png') }}" alt="Logo">
                 </a>
             </div>
         </div>
@@ -189,13 +190,13 @@
                 <div class="header-btn-box">
                     <button class="profile-btn" id="profileDropdown" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        <img src="dashboad/assets/images/admin.png" alt="image">
+                        <img src="{{ asset('images/Logo.png') }}" alt="Logo">
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="profileDropdown">
                         <li>
                             <div class="dropdown-txt text-center">
-                                <p class="mb-0">Shaikh Abu Dardah</p>
-                                <span class="d-block">CEO & Founder</span>
+                                <p class="mb-0">Gurmukh Singh</p>
+                                <span class="d-block">Founder & Director</span>
                             </div>
                         </li>
                         <li><a class="dropdown-item" href="dashboard-view-profile.html"><span

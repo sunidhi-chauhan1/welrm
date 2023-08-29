@@ -2,11 +2,11 @@
 
 @section('content')
     <!-- main content start -->
-    <div class="main-content">
+    {{-- <div class="main-content">
         <div class="dashboard-breadcrumb mb-30">
             <h2>Add New Product</h2>
             <div class="btn-box">
-                <a href="dashboard-all-product.html" class="btn btn-sm btn-primary">View All</a>
+                <a href="dashboard.dashboard-all-product.html" class="btn btn-sm btn-primary">View All</a>
             </div>
         </div>
         <div class="row g-4">
@@ -736,6 +736,91 @@
         </div>
 
 
+    </div> --}}
+
+
+
+    <div class="main-content" style="min-height: 559px;">
+        <div class="dashboard-breadcrumb mb-30">
+            <h2>Dashboard</h2>
+            <div class="input-group dashboard-filter">
+                <input type="text" class="form-control" name="basic" id="dashboardFilter" readonly="">
+                <label for="dashboardFilter" class="input-group-text"><i class="fa-light fa-calendar-days"></i></label>
+            </div>
+        </div>
+        <div class="row mb-30">
+            <div class="col-lg-3 col-6 col-xs-12">
+                <div class="dashboard-top-box rounded-bottom panel-bg">
+                    <div class="left">
+                        <h3>$34,152</h3>
+                        <p>Shipping fees are not</p>
+                        <a href="#">View net earnings</a>
+                    </div>
+                    <div class="right">
+                        <span class="text-primary">+16.24%</span>
+                        <div class="part-icon rounded">
+                            <span><i class="fa-light fa-dollar-sign"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 col-xs-12">
+                <div class="dashboard-top-box rounded-bottom panel-bg">
+                    <div class="left">
+                        <h3>36,894</h3>
+                        <p>Orders</p>
+                        <a href="#">Excluding orders in transit</a>
+                    </div>
+                    <div class="right">
+                        <span class="text-primary">+16.24%</span>
+                        <div class="part-icon rounded">
+                            <span><i class="fa-light fa-bag-shopping"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 col-xs-12">
+                <div class="dashboard-top-box rounded-bottom panel-bg">
+                    <div class="left">
+                        <h3>$34,152</h3>
+                        <p>Customers</p>
+                        <a href="#">See details</a>
+                    </div>
+                    <div class="right">
+                        <span class="text-primary">+16.24%</span>
+                        <div class="part-icon rounded">
+                            <span><i class="fa-light fa-user"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6 col-xs-12">
+                <div class="dashboard-top-box rounded-bottom panel-bg">
+                    <div class="left">
+                        <h3>$724,152</h3>
+                        <p>My Balance</p>
+                        <a href="#">Withdraw</a>
+                    </div>
+                    <div class="right">
+                        <span class="text-primary">+16.24%</span>
+                        <div class="part-icon rounded">
+                            <span><i class="fa-light fa-credit-card"></i></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+    
+
+    
     </div>
+
+
     <!-- main content end -->
 @endsection
